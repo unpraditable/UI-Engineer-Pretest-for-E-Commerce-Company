@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" >
+
+    <title>UI Engineer Test - Aditya Pradita</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<!--    <link rel="icon" href="favicon.ico" type="image/x-icon">-->
+</head>
+
+<body>
+    <div class="card-container">
+        <div class="card" title="Bose SoundLink">
+            <div class="product-image-container">
+                <div class="best-seller-flag">Bestseller</div>
+                <img class="product-image" src="assets/image.jpg">
+            </div>
+            <div class="product-title-container">
+                <h1 class="product-title">Bose SoundLink</h1>
+                <h2 class="product-subtitle">Little Speaker, Big Goosebumps</h2>
+            </div>
+            <nav class="popup-price-nav">
+                <a class="popup-trigger" href="#product-detail">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12">
+                        <path fill="#6D6D6D" d="M22,13 C22,14.104 21.104,15 20,15 C20,16.104 20.896,17 22,17 C23.104,17 24,16.104 24,15 C24,13.896 23.104,13 22,13 Z M22,9 C17.898,9 14,13.648 14,15 C14,16.352 17.898,21 22,21 C26.102,21 30,16.352 30,15 C30,13.648 26.102,9 22,9 Z M22,19 C19.791,19 18,17.209 18,15 C18,12.791 19.791,11 22,11 C24.209,11 26,12.791 26,15 C26,17.209 24.209,19 22,19 Z" transform="translate(-14 -9)"/>
+                    </svg>
+                </a>
+                <div class="price">$199</div>
+            </nav>
+        </div>
+        <div id="product-detail" class="overlay">
+        <a class="cancel" href="#"></a>
+        <div class="popup">
+            <div class="product-images-container">
+                <div class="best-seller-flag">Bestseller</div>
+                <div class="slider">
+                    <!--Menggunakan inline styles untuk background agar memudahkan untuk menembak data dari backend untuk konten gambar yang dinamis -->
+                    <div id="slide-1" class="slider-items"><img src="assets/image.jpg"></div>
+                    <div id="slide-2" class="slider-items"><img src="assets/image2.jpg"></div>
+                    <div id="slide-3" class="slider-items"><img src="assets/image3.jpg"></div>
+                </div>
+                <div class="dots-container" style="text-align:center">
+                    <span class="dot active" onclick="currentSlide(1)">
+                        <span class="inner-dot"></span>
+                    </span> 
+                    <span class="dot" onclick="currentSlide(2)">
+                        <span class="inner-dot"></span>
+                    </span> 
+                    <span class="dot" onclick="currentSlide(3)">
+                        <span class="inner-dot"></span>
+                    </span> 
+                </div>
+            </div>
+            
+            <div class="product-descriptions-container">
+                <div class="product-descriptions-inner-container">
+                    <div class="product-title-container">
+                        <h1 class="product-title">Bose SoundLink</h1>
+                        <h2 class="product-price">$ 199</h2>
+                        <h2 class="product-description">Wireless earphones for music lovers who live to move.</h2>
+                    </div>
+                    <div class="tab">
+                        <div class="tablinks active" onclick="changeTab(event, 'Specifications')">Specifications</div>
+                        <div class="tablinks" onclick="changeTab(event, 'Features')">Features</div>
+                    </div>
+                    <!-- Tab content -->
+                    <div id="Specifications" class="tabcontent opened">
+                        <div class="specifications-container">
+                            <ul class="specifications-list description-list">
+                                <li>Up to 8 hours playtime</li>
+                                <li>Powerful Sound</li>
+                                <li>Wireless earphones</li>
+                            </ul>
+                        </div>
+                        <div class="select-color-container">
+                            <h3>Choose your colors</h3>
+                            <div class="color-selection">
+                                <div class="color selected" data-color="silver" id="silver" onclick="selectColor(event)"></div>
+                                <div class="color" data-color="black" id="black" onclick="selectColor(event)"></div>
+                                <div class="color" data-color="yellow" id="yellow" onclick="selectColor(event)"></div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="Features" class="tabcontent">
+                        <div class="features-container">
+                            <ul class="features-list description-list">
+                                <li>Bumpers for bumping</li>
+                                <li>All Sound, No seam</li>
+                                <li>Grab and go</li>
+                            </ul>
+                        </div>
+                        <div class="empty-container">
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="other-specs">
+                        <ul class="features-list description-list">
+                            <li>Free shipping & returns + 2 year warranty</li>
+                        </ul>
+                    </div>
+                    <div class="button-container">
+                        <button class="buy-button">
+                            <div class="image-button-container">
+                                <img src="assets/cart.svg">
+                            </div>
+                            <p>BUY NOW</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
